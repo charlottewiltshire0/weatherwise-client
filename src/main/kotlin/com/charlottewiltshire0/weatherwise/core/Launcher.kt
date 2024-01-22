@@ -12,7 +12,7 @@ public class Launcher : Application() {
     override fun start(primaryStage: Stage) {
         val fxmlLoader = FXMLLoader(Launcher::class.java.getResource("views/Launcher.fxml"))
         val scene = Scene(fxmlLoader.load(), 375.0, 812.0)
-        val root: Parent = loader.load()
+//        val root: Parent = loader.load()
 
         primaryStage.title = "WeatherWise"
         primaryStage.scene = scene
@@ -33,10 +33,10 @@ public class Launcher : Application() {
         primaryStage.setX(200.0);
         primaryStage.setY(200.0);
 
-        // Связываем контроллер с главным окном
-        val controller = loader.getController<LauncherController>()
-        controller.initialize()
-        LauncherController.stage = primaryStage
+//        // Связываем контроллер с главным окном
+//        val controller = loader.getController<LauncherController>()
+//        controller.initialize()
+//        LauncherController.stage = primaryStage
 
         primaryStage.show()
     }
