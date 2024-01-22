@@ -1,0 +1,20 @@
+/*-- Подключаем другие CSS --*/
+@import "fonts.css";
+
+.root {
+    -fx-background-color: #fff;
+}
+
+#search {
+    -fx-border-radius: 512px;
+}
+
+.text-field {
+    -fx-accent: -fx-primary-color;
+    -fx-background-color: -fx-grey-color, white;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+}
+.text-field:focused {
+    -fx-background-color: -fx-primary-color, white;
+}

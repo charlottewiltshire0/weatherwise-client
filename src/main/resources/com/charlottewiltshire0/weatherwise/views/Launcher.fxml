@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Label?>
+<VBox maxHeight="812.0" maxWidth="812.0" minHeight="812.0" minWidth="375.0" prefHeight="900.0" prefWidth="375.0" spacing="20.0" styleClass="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.charlottewiltshire0.weatherwise.controllers.LauncherController">
+    <padding>
+        <Insets bottom="47.0" left="24.0" right="24.0" top="44.0" />
+    </padding>
+    
+   <stylesheets>
+      <URL value="@../style/css/weather.css" />
+      <URL value="@../style/css/fonts.css" />
+   </stylesheets>
+   <children>
+      <TextField id="search" maxHeight="46.0" maxWidth="327.0" minHeight="46.0" minWidth="327.0" prefHeight="46.0" prefWidth="327.0" text="asd" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label fx:id="label" >12</Label>
+   </children>
+</VBox>
