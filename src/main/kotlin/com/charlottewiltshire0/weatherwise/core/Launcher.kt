@@ -40,8 +40,4 @@ public class Launcher : Application() {
 
         primaryStage.show()
     }
-
-    private fun updateLabelText(label: Label, x: Double, y: Double) {
-        label.text = "Coordinates: X=$x, Y=$y"
-    }
 }
