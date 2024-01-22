@@ -20,6 +20,5 @@
       <TextField id="search" maxHeight="46.0" maxWidth="327.0" minHeight="46.0" minWidth="327.0" prefHeight="46.0" prefWidth="327.0" text="asd" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Label fx:id="label" >12</Label>
    </children>
 </VBox>

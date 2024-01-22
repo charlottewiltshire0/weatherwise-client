@@ -9,22 +9,4 @@ class LauncherController {
     @FXML
     private lateinit var label: Label
 
-    fun initialize() {
-        // Добавление слушателя событий перемещения окна
-        stage.xProperty().addListener { _, _, newValue ->
-            updateLabelText(newValue.toDouble(), stage.y)
-        }
-
-        stage.yProperty().addListener { _, _, newValue ->
-            updateLabelText(stage.x, newValue.toDouble())
-        }
-    }
-
-    private fun updateLabelText(x: Double, y: Double) {
-        label.text = "Coordinates: X=$x, Y=$y"
-    }
-
-    companion object {
-        lateinit var stage: Stage
-    }
 }
