@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="WeatherWise" width="200"></a>
+  <a href="https://github.com/StarStudioTeam/"><img src="https://media.discordapp.net/attachments/1119272529173950477/1199318717272703077/Group_61.png?ex=65c21b98&is=65afa698&hm=3dfd5914e4749d6b1a566d2a46a0d0862d78f9937ea8bd8abcfb1b6a7d538694&=&format=webp&quality=lossless" alt="WeatherWise" width="200"></a>
   <br>
   WeatherWise
   <br>
