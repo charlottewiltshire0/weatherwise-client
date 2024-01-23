@@ -1,0 +1,36 @@
+/*-- Подключаем другие CSS --*/
+@import "fonts.css";
+@import "variables.css";
+
+.root {
+    -fx-background-color: #fff;
+}
+
+#search {
+    -fx-border-radius: 512px;
+}
+
+.text-field {
+    -fx-accent: -fx-primary-color;
+    -fx-background-color: -fx-white-color, white;
+    /*-fx-background-insets: 0, 0 0 1 0;*/
+    -fx-background-radius: 15px;
+}
+.text-field:focused {
+    -fx-background-color: -fx-primary-color, white;
+    -fx-text-fill: -fx-grey-color;
+}
+
+#city {
+    -fx-text-fill: #2C2C2C;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.weatherInfo {
+    -fx-background-color: -fx-white-color;
+}
