@@ -16,10 +16,9 @@ public class Launcher : Application() {
         primaryStage.title = "WeatherWise"
         primaryStage.scene = scene
 
-        val width = 375.0 // Установите требуемую ширину окна
-        val height = 812.0 // Установите требуемую высоту окна
+        val width = 375.0
+        val height = 812.0
 
-        // Установите координаты так, чтобы окно открывалось справа снизу
         val x = screenBounds.maxX - width
         val y = screenBounds.maxY - height
 
@@ -28,7 +27,6 @@ public class Launcher : Application() {
         primaryStage.width = width
         primaryStage.height = height
 
-        // Установка стиля окна без декораций
         primaryStage.initStyle(StageStyle.UNDECORATED)
 
         /* Подключаем CSS */

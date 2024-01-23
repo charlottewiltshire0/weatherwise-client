@@ -23,7 +23,6 @@
 
    <stylesheets>
       <URL value="@../style/css/weather.css" />
-      <URL value="@../style/css/fonts.css" />
    </stylesheets>
    <children>
       <TextField id="search" focusTraversable="false" maxHeight="46.0" maxWidth="327.0" minHeight="46.0" minWidth="327.0" prefHeight="46.0" prefWidth="327.0" promptText="Search Location">
