@@ -3,6 +3,7 @@ module com.charlottewiltshire0.weatherwise {
     requires javafx.fxml;
     requires kotlin.stdlib;
     requires org.json;
+    requires com.jfoenix;
 
 
     opens com.charlottewiltshire0.weatherwise to javafx.fxml;
