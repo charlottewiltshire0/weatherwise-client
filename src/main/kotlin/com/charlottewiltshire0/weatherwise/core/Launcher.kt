@@ -33,12 +33,10 @@ public class Launcher : Application() {
 
         /* Подключаем CSS */
         val weatherCssUrl = javaClass.classLoader.getResource("style/css/weather.css")
-        val fontsCssUrl = javaClass.classLoader.getResource("style/css/fonts.css")
 
-        if (weatherCssUrl != null && fontsCssUrl != null) {
+        if (weatherCssUrl != null) {
             scene.stylesheets.addAll(
                 weatherCssUrl.toExternalForm(),
-                fontsCssUrl.toExternalForm()
             )
         }
 
