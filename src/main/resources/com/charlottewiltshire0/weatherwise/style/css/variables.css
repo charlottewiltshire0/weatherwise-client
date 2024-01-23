@@ -1,0 +1,8 @@
+* {
+    -fx-primary-color: #C4C4C4;
+    -fx-secondary-color: #9A9A9A;
+    -fx-grey-color: #2C2C2C;
+    -fx-white-color: #FDFCFC;
+
+    -fx-focus-color: -fx-secondary-color;
+}
