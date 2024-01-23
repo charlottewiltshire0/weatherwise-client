@@ -24,7 +24,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+![screenshot](https://media.discordapp.net/attachments/1119272529173950477/1199323746301911142/Cloudy.png?ex=65c22047&is=65afab47&hm=4483ae8d921360b19d70514c13246192a49d4a87a3d6216ad6c7896fc85b1ff0&=&format=webp&quality=lossless&width=301&height=651)
 
 ## Download
 
