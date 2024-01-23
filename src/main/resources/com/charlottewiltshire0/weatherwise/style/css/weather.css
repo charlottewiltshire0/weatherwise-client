@@ -22,7 +22,7 @@
     -fx-text-fill: -fx-grey-color;
 }
 
-#city {
+#cityName {
     -fx-text-fill: #2C2C2C;
     text-align: center;
     font-family: Poppins;

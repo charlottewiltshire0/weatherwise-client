@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="380.0" maxWidth="360.0" minHeight="380.0" minWidth="360.0" prefHeight="380.0" prefWidth="360.0" spacing="20.0" styleClass="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.charlottewiltshire0.weatherwise.controllers.LauncherController">
+<VBox maxHeight="380.0" maxWidth="0.0" minHeight="380.0" minWidth="360.0" prefHeight="380.0" prefWidth="360.0" spacing="20.0" styleClass="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.charlottewiltshire0.weatherwise.controllers.LauncherController">
     <padding>
         <Insets bottom="47.0" left="24.0" right="24.0" top="44.0" />
     </padding>
@@ -30,7 +30,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="42.0" prefWidth="207.0">
                <children>
-                  <Text fx:id="city" strokeType="OUTSIDE" strokeWidth="0.0" text="Hyderabad" textAlignment="CENTER" wrappingWidth="172.0">
+                  <Text fx:id="cityName" strokeType="OUTSIDE" strokeWidth="0.0" text="USA" textAlignment="CENTER">
                      <font>
                         <Font name="Poppins SemiBold" size="30.0" />
                      </font>
@@ -44,7 +44,7 @@
             </HBox>
             <HBox alignment="CENTER" maxHeight="70.0" maxWidth="105.0" minHeight="70.0" minWidth="105.0" prefHeight="70.0" prefWidth="105.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="31" textAlignment="CENTER" wrappingWidth="92.0">
+                  <Text fx:id="degreeC" strokeType="OUTSIDE" strokeWidth="0.0" text="31" textAlignment="CENTER" wrappingWidth="92.0">
                      <font>
                         <Font name="Poppins SemiBold" size="70.0" />
                      </font>

@@ -1,13 +1,15 @@
-package com.charlottewiltshire0.weatherwise.core.utils
+package com.charlottewiltshire0.weatherwise.core.weather
 
+import com.charlottewiltshire0.weatherwise.core.utils.getCity
+import com.charlottewiltshire0.weatherwise.core.utils.getLocation
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-fun getLocation(): String {
-    val url = URL("https://api.geoapify.com/v1/ipinfo?apiKey=${System.getenv("GEOAPIFY_APIKEY")}")
+fun getDegree(city: String = getCity()): String {
+    val url = URL("http://api.weatherapi.com/v1/current.json?key=${System.getenv("WEATHERAPI_APIKEY")}&q=$city&aqi=no")
     val connection = url.openConnection() as HttpURLConnection
 
     try {
@@ -28,14 +30,9 @@ fun getLocation(): String {
     }
 }
 
-fun getCity(response: String = getLocation()): String {
+fun getTemp_c(response: String = getDegree()): Int {
     val jsonObject = JSONObject(response)
-    val cityObject = jsonObject.getJSONObject("city")
-    return cityObject.getString("name")
+    val cityObject = jsonObject.getJSONObject("current")
+    return cityObject.getFloat("temp_c").toInt()
 }
 
-fun getCountry(response: String = getLocation()): String {
-    val jsonObject = JSONObject(response)
-    val cityObject = jsonObject.getJSONObject("country")
-    return cityObject.getString("name")
-}

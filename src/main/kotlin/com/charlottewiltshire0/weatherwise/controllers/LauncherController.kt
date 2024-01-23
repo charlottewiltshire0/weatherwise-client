@@ -1,12 +1,21 @@
 package com.charlottewiltshire0.weatherwise.controllers
 
+import com.charlottewiltshire0.weatherwise.core.utils.getCity
+import com.charlottewiltshire0.weatherwise.core.weather.getTemp_c
 import javafx.fxml.FXML
-import javafx.stage.Stage
-import javafx.scene.control.Label
+import javafx.scene.text.Text
 
 class LauncherController {
 
     @FXML
-    private lateinit var label: Label
+    private lateinit var cityName: Text
+    private lateinit var degreeC: Text
+
+    fun initialize() {
+        cityName.text = getCity()
+
+        // Convert the String to Double before assigning
+        degreeC = Text(getTemp_c().toString())
+    }
 
 }
