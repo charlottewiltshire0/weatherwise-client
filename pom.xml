@@ -55,18 +55,23 @@
             <version>21</version> <!-- Adjust the version as needed -->
         </dependency>
         <dependency>
+            <groupId>com.dorkbox</groupId>
+            <artifactId>SystemTray</artifactId>
+            <version>4.5</version>
+        </dependency>
+        <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20210307</version>
         </dependency>
     </dependencies>
     <repositories>
-        <!-- Ktor repository -->
         <repository>
             <id>ktor</id>
             <url>https://repo.ktor.io/releases</url>
         </repository>
     </repositories>
+
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>

@@ -1,10 +1,11 @@
 /*-- Подключаем другие CSS --*/
-@import "fonts.css";
 @import "variables.css";
 
 .root {
     -fx-background-color: #fff;
+    -fx-background-radius: 15;
 }
+
 
 #search {
     -fx-border-radius: 512px;
@@ -21,7 +22,7 @@
     -fx-text-fill: -fx-grey-color;
 }
 
-#city {
+#cityName {
     -fx-text-fill: #2C2C2C;
     text-align: center;
     font-family: Poppins;

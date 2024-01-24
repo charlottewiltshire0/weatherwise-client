@@ -7,41 +7,56 @@ import javafx.stage.Stage
 import javafx.stage.Screen
 import javafx.stage.StageStyle
 import javafx.geometry.Rectangle2D
+import java.io.IOException
 
-public class Launcher : Application() {
+class Launcher : Application() {
+
+    // Константы для ширины и высоты окна
+    private inline val WINDOW_WIDTH get() = 360.0
+    private inline val WINDOW_HEIGHT get() = 380.0
+
     override fun start(primaryStage: Stage) {
-        val fxmlLoader = FXMLLoader(Launcher::class.java.getResource("views/Launcher.fxml"))
-        val scene = Scene(fxmlLoader.load(), 375.0, 812.0)
-        val screenBounds: Rectangle2D = Screen.getPrimary().bounds
-        primaryStage.title = "WeatherWise"
-        primaryStage.scene = scene
+        try {
+            // Загрузка FXML
+            val fxmlLoader = FXMLLoader(Launcher::class.java.getResource("views/Launcher.fxml"))
+            val scene = Scene(fxmlLoader.load(), WINDOW_WIDTH, WINDOW_HEIGHT)
 
-        val width = 375.0 // Установите требуемую ширину окна
-        val height = 812.0 // Установите требуемую высоту окна
+            // Получаем размеры экрана
+            val screenBounds: Rectangle2D = Screen.getPrimary().bounds
 
-        // Установите координаты так, чтобы окно открывалось справа снизу
-        val x = screenBounds.maxX - width
-        val y = screenBounds.maxY - height
+            // Конфигурация Stage с использованием with
+            with(primaryStage) {
+                title = "WeatherWise"
+                this.scene = scene
+                initStyle(StageStyle.UNDECORATED)
 
-        primaryStage.x = x
-        primaryStage.y = y
-        primaryStage.width = width
-        primaryStage.height = height
+                // Размещение окна в правом нижнем углу экрана над панелью задач
+                val x = screenBounds.maxX - WINDOW_WIDTH
+                val y = screenBounds.maxY - WINDOW_HEIGHT + getTaskbarHeight()
+                this.x = x
+                this.y = y
+                width = WINDOW_WIDTH
+                height = WINDOW_HEIGHT
+            }
 
-        // Установка стиля окна без декораций
-        primaryStage.initStyle(StageStyle.UNDECORATED)
+            /* Подключаем CSS */
+            val weatherCssUrl = javaClass.classLoader.getResource("style/css/weather.css")
 
-        /* Подключаем CSS */
-        val weatherCssUrl = javaClass.classLoader.getResource("style/css/weather.css")
-        val fontsCssUrl = javaClass.classLoader.getResource("style/css/fonts.css")
+            if (weatherCssUrl != null) {
+                scene.stylesheets.addAll(weatherCssUrl.toExternalForm())
+            }
 
-        if (weatherCssUrl != null && fontsCssUrl != null) {
-            scene.stylesheets.addAll(
-                weatherCssUrl.toExternalForm(),
-                fontsCssUrl.toExternalForm()
-            )
+            // Отображение Stage
+            primaryStage.show()
+
+        } catch (e: IOException) {
+            e.printStackTrace()
         }
+    }
 
-        primaryStage.show()
+    // Функция для получения высоты панели задачи
+    private fun getTaskbarHeight(): Double {
+        val screenBounds: Rectangle2D = Screen.getPrimary().visualBounds
+        return screenBounds.height - Screen.getPrimary().bounds.height
     }
 }
