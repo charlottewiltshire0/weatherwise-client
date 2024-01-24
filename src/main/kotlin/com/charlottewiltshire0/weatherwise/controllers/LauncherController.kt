@@ -5,7 +5,6 @@ import com.charlottewiltshire0.weatherwise.core.weather.getTemp_c
 import com.charlottewiltshire0.weatherwise.core.weather.getUV
 import com.charlottewiltshire0.weatherwise.core.weather.getRain
 import com.charlottewiltshire0.weatherwise.core.utils.getCurrentTimeWithAMPM
-import com.charlottewiltshire0.weatherwise.core.weather.getPm25
 import javafx.fxml.FXML
 import javafx.scene.text.Text
 
@@ -26,8 +25,8 @@ class LauncherController {
     @FXML
     private lateinit var time: Text
 
-    @FXML
-    private lateinit var aq: Text
+//    @FXML
+//    private lateinit var aq: Text
 
     @FXML
     fun initialize() {
@@ -41,6 +40,6 @@ class LauncherController {
 
         time.text = getCurrentTimeWithAMPM()
 
-        aq.text = getPm25().toString()
+//        aq.text = getPm25().toString()
     }
 }

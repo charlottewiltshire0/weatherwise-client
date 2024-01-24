@@ -41,8 +41,8 @@ fun getUV(response: String = getCurrent()): Int {
     return cityObject.getFloat("uv").toInt()
 }
 
-fun getPm25(response: String = getCurrent()): Double {
+fun getPm25(response: String = getCurrent()): Float {
     val jsonObject = JSONObject(response)
-    val pm25Value = jsonObject.getJSONObject("current").getJSONObject("air_quality").getDouble("pm2_5")
+    val pm25Value = jsonObject.getJSONObject("current").getJSONObject("air_quality").getFloat("pm2_5")
     return pm25Value
 }
