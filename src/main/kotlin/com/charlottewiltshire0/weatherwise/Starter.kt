@@ -1,11 +1,10 @@
 package com.charlottewiltshire0.weatherwise
 
 import com.charlottewiltshire0.weatherwise.core.*
-import com.charlottewiltshire0.weatherwise.core.weather.getDegree
-import com.charlottewiltshire0.weatherwise.core.weather.getTemp_c
+import com.charlottewiltshire0.weatherwise.core.weather.getForecast
 import javafx.application.Application
 
 fun main(args: Array<String>) {
-    println(getTemp_c())
+    println(getForecast())
     Application.launch(Launcher::class.java, *args)
 }

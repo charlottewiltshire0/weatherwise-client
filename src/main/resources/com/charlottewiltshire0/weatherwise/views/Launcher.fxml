@@ -99,22 +99,22 @@
                   <Font name="Poppins Medium" size="12.0" />
                </font>
             </Text>
-            <Text fill="#9a9a9a" strokeType="OUTSIDE" strokeWidth="0.0" text="11:25 AM" textAlignment="CENTER" wrappingWidth="85.0" GridPane.rowIndex="1">
+            <Text fx:id="time" fill="#9a9a9a" strokeType="OUTSIDE" strokeWidth="0.0" text="11:25 AM" textAlignment="CENTER" wrappingWidth="85.0" GridPane.rowIndex="1">
                <font>
                   <Font name="Poppins Medium" size="15.0" />
                </font>
             </Text>
-            <Text fill="#9a9a9a" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="85.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Text fx:id="UV" fill="#9a9a9a" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="85.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Poppins Medium" size="15.0" />
                </font>
             </Text>
-            <Text fill="#9a9a9a" strokeType="OUTSIDE" strokeWidth="0.0" text="58%" textAlignment="CENTER" wrappingWidth="85.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Text fx:id="rainChange" fill="#9a9a9a" strokeType="OUTSIDE" strokeWidth="0.0" text="58%" textAlignment="CENTER" wrappingWidth="85.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font name="Poppins Medium" size="15.0" />
                </font>
             </Text>
-            <Text fill="#9a9a9a" strokeType="OUTSIDE" strokeWidth="0.0" text="22" textAlignment="CENTER" wrappingWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Text fx:id="aq" fill="#9a9a9a" strokeType="OUTSIDE" strokeWidth="0.0" text="22" textAlignment="CENTER" wrappingWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="Poppins Medium" size="15.0" />
                </font>

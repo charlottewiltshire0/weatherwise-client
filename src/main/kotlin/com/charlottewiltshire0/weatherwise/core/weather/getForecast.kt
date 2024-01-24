@@ -1,15 +1,14 @@
 package com.charlottewiltshire0.weatherwise.core.weather
 
 import com.charlottewiltshire0.weatherwise.core.utils.getCity
-import com.charlottewiltshire0.weatherwise.core.utils.getLocation
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-fun getDegree(city: String = getCity()): String {
-    val url = URL("http://api.weatherapi.com/v1/current.json?key=${System.getenv("WEATHERAPI_APIKEY")}&q=$city&aqi=no")
+fun getForecast(city: String = getCity()): String {
+    val url = URL("http://api.weatherapi.com/v1/forecast.json?key=${System.getenv("WEATHERAPI_APIKEY")}&q=$city&aqi=no&days=1&aqi=no&alerts=no")
     val connection = url.openConnection() as HttpURLConnection
 
     try {
@@ -30,9 +29,9 @@ fun getDegree(city: String = getCity()): String {
     }
 }
 
-fun getTemp_c(response: String = getDegree()): Int {
+fun getRain(response: String = getForecast()): Int {
     val jsonObject = JSONObject(response)
-    val cityObject = jsonObject.getJSONObject("current")
-    return cityObject.getFloat("temp_c").toInt()
+    val forecastArray = jsonObject.getJSONObject("forecast").getJSONArray("forecastday")
+    val firstForecast = forecastArray.getJSONObject(0)  // Assuming you want the first day's forecast
+    return firstForecast.getJSONObject("day").getInt("daily_chance_of_rain")
 }
-
